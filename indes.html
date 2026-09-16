@@ -1,1 +1,1064 @@
-# Khaja-ghar
+<!doctype html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Newroad Khaja Ghar | Bhimad, Tanahun</title>
+
+<style>
+:root{
+--dark:#101214;
+--gold:#f5b51b;
+--red:#c92323;
+--green:#16b85a;
+--cream:#fffaf1;
+--muted:#6c6c6c;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:Arial,"Noto Sans",sans-serif;
+background:var(--cream);
+color:#171717;
+line-height:1.55
+}
+
+a{text-decoration:none}
+
+.top{
+position:sticky;
+top:0;
+z-index:50;
+background:#101214f5;
+color:#fff;
+backdrop-filter:blur(12px);
+box-shadow:0 4px 18px #0003
+}
+
+.nav{
+max-width:1180px;
+margin:auto;
+padding:11px 16px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:14px
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+color:#fff
+}
+
+.chef{font-size:31px}
+
+.brand b{
+display:block;
+color:var(--gold);
+font-size:20px
+}
+
+.brand small{
+display:block;
+color:#ddd;
+font-size:11px
+}
+
+.links{
+display:flex;
+gap:18px;
+font-size:14px
+}
+
+.links a{color:#fff}
+
+.links a:hover{color:var(--gold)}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+padding:11px 15px;
+border-radius:12px;
+font-weight:800
+}
+
+.gold{background:var(--gold);color:#111}
+.red{background:#ef2929;color:#fff}
+.green{background:#20bb60;color:#fff}
+
+.hero{
+min-height:610px;
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg,#000d 0%,#0008 45%,#0002 80%),
+url("food-1.jpeg") center/cover
+}
+
+.heroIn{
+max-width:1180px;
+width:100%;
+margin:auto;
+padding:75px 20px;
+color:#fff
+}
+
+.heroK{
+color:var(--gold);
+font-size:22px;
+font-weight:800
+}
+
+.hero h1{
+font-size:clamp(46px,7vw,82px);
+line-height:.92;
+margin:8px 0
+}
+
+.hero h1 span{color:var(--gold)}
+
+.hero p{
+max-width:650px;
+font-size:18px;
+margin:22px 0
+}
+
+.buttons{
+display:flex;
+gap:10px;
+flex-wrap:wrap
+}
+
+.section{
+max-width:1180px;
+margin:auto;
+padding:58px 18px
+}
+
+.head{
+margin-bottom:23px
+}
+
+.head h2{
+font-size:32px;
+margin:0 0 5px
+}
+
+.head p{
+color:var(--muted);
+margin:0
+}
+
+/* TODAY SPECIAL */
+
+.special{
+display:grid;
+grid-template-columns:1fr 1fr;
+background:linear-gradient(135deg,#741515,#c12626);
+border-radius:25px;
+overflow:hidden;
+color:#fff;
+box-shadow:0 15px 35px #0002
+}
+
+.specialImg{
+min-height:310px;
+background:url("food-2.jpeg") center/cover
+}
+
+.specialText{
+padding:32px
+}
+
+.specialText h3{
+font-size:32px;
+color:#ffd34c;
+margin:10px 0
+}
+
+.specialPrice{
+display:inline-block;
+background:var(--gold);
+color:#111;
+font-weight:900;
+padding:7px 13px;
+border-radius:10px;
+margin:9px 0 17px
+}
+
+/* MENU */
+
+.menu{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px
+}
+
+.category{
+margin:28px 0 13px;
+font-size:21px;
+font-weight:900;
+border-left:5px solid var(--gold);
+padding-left:10px
+}
+
+.card{
+background:#fff;
+border:1px solid #eee;
+border-radius:18px;
+padding:19px;
+box-shadow:0 8px 24px #0000000d;
+transition:.2s
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 13px 30px #0002
+}
+
+.ico{font-size:30px}
+
+.card h3{
+margin:8px 0 3px;
+font-size:18px
+}
+
+.card p{
+margin:0;
+color:var(--muted);
+font-size:13px
+}
+
+.cost{
+color:var(--red);
+font-weight:900;
+font-size:18px;
+margin-top:8px
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px
+}
+
+.photo{
+width:100%;
+height:330px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 8px 25px #0002
+}
+
+/* VIDEO */
+
+.video{
+background:#101214;
+border-radius:24px;
+padding:16px;
+box-shadow:0 12px 30px #0002
+}
+
+.video iframe{
+display:block;
+width:100%;
+aspect-ratio:16/9;
+border:0;
+border-radius:15px
+}
+
+.videoTitle{
+color:#fff;
+font-size:21px;
+font-weight:800;
+padding:7px 3px
+}
+
+/* ABOUT */
+
+.about{
+background:#101214;
+color:#fff;
+border-radius:24px;
+padding:32px;
+display:grid;
+grid-template-columns:1.35fr .65fr;
+gap:28px
+}
+
+.about h2{
+color:var(--gold);
+margin-top:0
+}
+
+.hours{
+font-size:25px;
+font-weight:900;
+color:#fff
+}
+
+/* LOCATION */
+
+.info{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:18px
+}
+
+.box{
+background:#fff;
+border-radius:18px;
+padding:21px;
+box-shadow:0 8px 22px #0001
+}
+
+.box strong{
+display:block;
+font-size:18px;
+margin:6px 0
+}
+
+.box p{
+margin:0;
+color:var(--muted)
+}
+
+.map{
+width:100%;
+height:320px;
+border:0;
+border-radius:20px;
+box-shadow:0 8px 22px #0001
+}
+
+/* DRINK NOTICE */
+
+.notice{
+margin-top:16px;
+padding:14px 16px;
+border-radius:14px;
+background:#fff3cd;
+border:1px solid #f0d98b;
+color:#6b5200
+}
+
+/* FOOTER */
+
+footer{
+background:#101214;
+color:#fff;
+text-align:center;
+padding:34px 18px
+}
+
+footer b{
+color:var(--gold);
+font-size:23px
+}
+
+.bottom{display:none}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.links{display:none}
+
+.menu{
+grid-template-columns:repeat(2,1fr)
+}
+
+.special,
+.about{
+grid-template-columns:1fr
+}
+
+.info{
+grid-template-columns:1fr
+}
+
+.gallery{
+grid-template-columns:1fr
+}
+
+.bottom{
+display:flex;
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+z-index:60;
+background:#101214;
+color:#fff;
+justify-content:space-around;
+padding:8px 3px;
+box-shadow:0 -5px 20px #0003
+}
+
+.bottom a{
+color:#fff;
+text-align:center;
+font-size:11px
+}
+
+.bottom span{
+display:block;
+font-size:18px
+}
+
+footer{
+padding-bottom:72px
+}
+
+}
+
+@media(max-width:480px){
+
+.brand b{font-size:16px}
+
+.brand small{font-size:10px}
+
+.green{display:none}
+
+.hero{
+min-height:610px
+}
+
+.heroIn{
+padding:55px 18px
+}
+
+.hero h1{
+font-size:49px
+}
+
+.hero p{
+font-size:16px
+}
+
+.menu{
+gap:10px
+}
+
+.card{
+padding:14px
+}
+
+.card h3{
+font-size:16px
+}
+
+.photo{
+height:300px
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="top">
+
+<nav class="nav">
+
+<a class="brand" href="#home">
+
+<span class="chef">👨‍🍳</span>
+
+<span>
+
+<b>Newroad Khaja Ghar</b>
+
+<small>
+Bhimad, Tanahun • स्वादको आफ्नै ठाउँ
+</small>
+
+</span>
+
+</a>
+
+<div class="links">
+
+<a href="#menu">🍽️ Menu</a>
+
+<a href="#special">⭐ Special</a>
+
+<a href="#photos">📸 Photos</a>
+
+<a href="#video">▶️ Video</a>
+
+<a href="#location">📍 Location</a>
+
+</div>
+
+<div>
+
+<a class="btn green"
+href="https://wa.me/9779819154455"
+target="_blank">
+
+WhatsApp
+
+</a>
+
+<a class="btn red"
+href="tel:+9779819154455">
+
+Call Now
+
+</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="heroIn">
+
+<div class="heroK">
+Welcome to
+</div>
+
+<h1>
+Newroad<br>
+<span>Khaja Ghar</span>
+</h1>
+
+<p>
+
+Fresh, tasty & authentic Nepali khaja.
+Momo, chowmein, khana set, khaja set,
+tea, coffee र धेरै स्वादिला परिकारहरू —
+साथीभाइ र परिवारसँग रमाइलो गर्दै खानको लागि।
+
+</p>
+
+<div class="buttons">
+
+<a class="btn gold" href="#menu">
+🍴 View Menu
+</a>
+
+<a class="btn"
+style="background:#fff;color:#111"
+href="tel:+9779819154455">
+
+📞 9819154455
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TODAY SPECIAL -->
+
+<section class="section" id="special">
+
+<div class="head">
+
+<h2>
+⭐ Today's Special
+</h2>
+
+<p>
+आजको विशेष — पछि तपाईंले सजिलै परिवर्तन गर्न सक्नुहुन्छ।
+</p>
+
+</div>
+
+<div class="special">
+
+<div class="specialImg"></div>
+
+<div class="specialText">
+
+<b style="color:#ffd34c">
+TODAY'S SPECIAL
+</b>
+
+<h3>
+Chicken Khaja Set
+</h3>
+
+<p>
+स्वादिलो नेपाली खाना र ताजा तरकारीसहितको खाजा सेट।
+</p>
+
+<span class="specialPrice">
+रु. 200
+</span>
+
+<br>
+
+<a class="btn gold"
+href="tel:+9779819154455">
+
+Order / Enquiry →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section class="section" id="menu">
+
+<div class="head">
+
+<h2>
+🍽️ Menu & Prices
+</h2>
+
+<p>
+Fresh Food • Good Taste • Affordable Price
+</p>
+
+</div>
+
+
+<div class="category">
+🥟 Momo & Chowmein
+</div>
+
+<div class="menu">
+
+<div class="card">
+<div class="ico">🥟</div>
+<h3>Buff Momo</h3>
+<p>Steamed & delicious</p>
+<div class="cost">रु. 130 / plate</div>
+</div>
+
+<div class="card">
+<div class="ico">🥟</div>
+<h3>Chicken Momo</h3>
+<p>Steamed & delicious</p>
+<div class="cost">रु. 120 / plate</div>
+</div>
+
+<div class="card">
+<div class="ico">🍜</div>
+<h3>Buff Chowmein</h3>
+<p>Freshly prepared</p>
+<div class="cost">रु. 140 / plate</div>
+</div>
+
+<div class="card">
+<div class="ico">🍜</div>
+<h3>Chicken Chowmein</h3>
+<p>Freshly prepared</p>
+<div class="cost">रु. 130 / plate</div>
+</div>
+
+<div class="card">
+<div class="ico">🍛</div>
+<h3>Cambo Set</h3>
+<p>Popular khaja choice</p>
+<div class="cost">रु. 130</div>
+</div>
+
+</div>
+
+
+<div class="category">
+🍚 Khana & Khaja Set
+</div>
+
+<div class="menu">
+
+<div class="card">
+<div class="ico">🍳</div>
+<h3>Anda Tarkali Roti</h3>
+<p>Simple & tasty</p>
+<div class="cost">रु. 100</div>
+</div>
+
+<div class="card">
+<div class="ico">🍚</div>
+<h3>Sada Khana</h3>
+<p>Simple Nepali meal</p>
+<div class="cost">रु. 150</div>
+</div>
+
+<div class="card">
+<div class="ico">🍖</div>
+<h3>Masu Khana</h3>
+<p>Hearty Nepali meal</p>
+<div class="cost">रु. 250</div>
+</div>
+
+<div class="card">
+<div class="ico">🥘</div>
+<h3>Buff Khaja Set</h3>
+<p>Tasty & filling</p>
+<div class="cost">रु. 200</div>
+</div>
+
+<div class="card">
+<div class="ico">🍗</div>
+<h3>Chicken Khaja Set</h3>
+<p>Tasty & filling</p>
+<div class="cost">रु. 200</div>
+</div>
+
+<div class="card">
+<div class="ico">🐖</div>
+<h3>Pork Set</h3>
+<p>Available</p>
+<div class="cost">Available</div>
+</div>
+
+</div>
+
+
+<div class="category">
+☕ Tea & Coffee
+</div>
+
+<div class="menu">
+
+<div class="card">
+<div class="ico">🍵</div>
+<h3>Black Tea</h3>
+<p>Hot & refreshing</p>
+<div class="cost">रु. 20</div>
+</div>
+
+<div class="card">
+<div class="ico">☕</div>
+<h3>Milk Tea</h3>
+<p>Hot & creamy</p>
+<div class="cost">रु. 30</div>
+</div>
+
+<div class="card">
+<div class="ico">☕</div>
+<h3>Black Coffee</h3>
+<p>Fresh coffee</p>
+<div class="cost">रु. 60</div>
+</div>
+
+<div class="card">
+<div class="ico">☕</div>
+<h3>Milk Coffee</h3>
+<p>Hot & creamy</p>
+<div class="cost">रु. 80</div>
+</div>
+
+</div>
+
+
+<div class="category">
+🥤 Drinks
+</div>
+
+<div class="notice">
+
+Soft drinks, hard drinks, beer र local Rausi पनि उपलब्ध छन्।
+सेवन कानुनी उमेर पुगेकाहरूका लागि मात्र।
+
+</div>
+
+</section>
+
+
+<!-- PHOTOS -->
+
+<section class="section" id="photos">
+
+<div class="head">
+
+<h2>
+📸 Our Food Photos
+</h2>
+
+<p>
+ताजा फोटोहरू — पछि थप्दै जान सकिन्छ।
+</p>
+
+</div>
+
+<div class="gallery">
+
+<img
+class="photo"
+src="food-1.jpeg"
+alt="Newroad Khaja Ghar food"
+>
+
+<img
+class="photo"
+src="food-2.jpeg"
+alt="Newroad Khaja Ghar food"
+>
+
+</div>
+
+</section>
+
+
+<!-- VIDEO -->
+
+<section class="section" id="video">
+
+<div class="head">
+
+<h2>
+▶️ Watch Our Video
+</h2>
+
+<p>
+Newroad Khaja Ghar को YouTube Short
+</p>
+
+</div>
+
+<div class="video">
+
+<div class="videoTitle">
+🎥 Newroad Khaja Ghar
+</div>
+
+<iframe
+src="https://www.youtube.com/embed/pSXg4m7g-7M"
+title="Newroad Khaja Ghar YouTube video"
+allowfullscreen
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+<div class="about">
+
+<div>
+
+<h2>
+About Newroad Khaja Ghar
+</h2>
+
+<p>
+
+भिमाद, तनहुँमा रहेको Newroad Khaja Ghar मा
+नेपाली स्वादका लोकप्रिय खाजा तथा खाना पाइन्छ।
+Momo, Chowmein, Khana Set, Khaja Set,
+tea, coffee लगायतका परिकारहरू उपलब्ध छन्।
+
+</p>
+
+<p>
+❤️ Good Food + Happy Customers = Our Success
+</p>
+
+</div>
+
+
+<div>
+
+<h2>
+🕐 Opening Hours
+</h2>
+
+<div class="hours">
+7:00 AM – 9:00 PM
+</div>
+
+<p>
+Everyday • बिहान ७ बजे देखि बेलुका ९ बजे सम्म
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section class="section" id="location">
+
+<div class="head">
+
+<h2>
+📍 Visit Us
+</h2>
+
+<p>
+Newroad, Bhimad, Tanahun, Nepal
+</p>
+
+</div>
+
+
+<iframe
+class="map"
+src="https://www.google.com/maps?q=Newroad%20Khaja%20Ghar%20Bhimad%20Tanahun&output=embed"
+loading="lazy">
+</iframe>
+
+
+<div class="info">
+
+
+<div class="box">
+
+📞
+
+<strong>
+Call Us
+</strong>
+
+<p>
+9819154455
+</p>
+
+<br>
+
+<a
+class="btn red"
+href="tel:+9779819154455">
+
+Call Now
+
+</a>
+
+</div>
+
+
+<div class="box">
+
+🕐
+
+<strong>
+Opening Hours
+</strong>
+
+<p>
+Everyday<br>
+7:00 AM – 9:00 PM
+</p>
+
+</div>
+
+
+<div class="box">
+
+📍
+
+<strong>
+Location
+</strong>
+
+<p>
+Newroad, Bhimad<br>
+Tanahun, Nepal
+</p>
+
+<br>
+
+<a
+class="btn gold"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Newroad+Khaja+Ghar+Bhimad+Tanahun">
+
+Google Maps →
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<b>
+Newroad Khaja Ghar
+</b>
+
+<p>
+स्वादको आफ्नै ठाउँ ❤️ • Bhimad, Tanahun
+</p>
+
+<small>
+© 2026 Newroad Khaja Ghar
+</small>
+
+</footer>
+
+
+<!-- MOBILE BOTTOM MENU -->
+
+<div class="bottom">
+
+<a href="#home">
+<span>🏠</span>
+Home
+</a>
+
+<a href="#menu">
+<span>🍽️</span>
+Menu
+</a>
+
+<a href="#special">
+<span>⭐</span>
+Special
+</a>
+
+<a href="tel:+9779819154455">
+<span>📞</span>
+Call
+</a>
+
+<a href="#location">
+<span>📍</span>
+Map
+</a>
+
+</div>
+
+</body>
+</html>
