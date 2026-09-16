@@ -18,7 +18,7 @@
 
 *{box-sizing:border-box}
 
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth}u
 
 body{
 margin:0;
@@ -1060,5 +1060,41 @@ Map
 
 </div>
 
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-wrapper">
+            <h1>🕐 Digital Clock</h1>
+            <p class="subtitle">Multiple Time Zones</p>
+
+            <!-- Add Timezone Section -->
+            <div class="add-timezone-section">
+                <select id="timezoneSelect" class="timezone-select">
+                    <option value="">Select a timezone...</option>
+                </select>
+                <button id="addBtn" class="add-btn">Add Timezone</button>
+            </div>
+
+            <!-- Clock Display -->
+            <div id="clocksContainer" class="clocks-container"></div>
+
+            <!-- Control Buttons -->
+            <div class="control-section">
+                <button id="toggleFormatBtn" class="toggle-btn">Switch to 12-Hour</button>
+                <button id="clearAllBtn" class="clear-btn">Clear All</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
